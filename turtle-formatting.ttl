@@ -1,0 +1,563 @@
+@prefix : <http://purl.org/atextor/ontology/turtle-formatting#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://purl.org/atextor/ontology/turtle-formatting> .
+
+<http://purl.org/atextor/ontology/turtle-formatting> a owl:Ontology ;
+    rdfs:label "Turtle Formatting" ;
+    dcterms:title "RDF/Turtle Formatting Style Ontology" ;
+    dcterms:description "Defines a vocabulary for the description of settings for pretty-printing a RDF/Turtle document."@en ;
+	 dcterms:creator "Andreas Textor";
+	 dcterms:rights "Apache 2.0 License";
+	 dcterms:issued "2020-10-02"^^xsd:date;
+    owl:versionInfo "1.0.0" .
+
+# Object Properties
+
+:afterClosingParenthesis a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:afterClosingSquareBracket a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:afterComma a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:afterDot a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:afterOpeningParenthesis a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:afterOpeningSquareBracket a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:afterSemicolon a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:alignPrefixes a owl:ObjectProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :Alignment .
+
+:beforeClosingParenthesis a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:beforeClosingSquareBracket a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:beforeComma a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:beforeDot a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:beforeOpeningParenthesis a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:beforeOpeningSquareBracket a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:beforeSemicolon a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :GapStyle .
+
+:charset a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :Charset .
+
+:endOfLine a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :EndOfLineStyle .
+
+:indentStyle a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :IndentStyle .
+
+:knownPrefix a owl:ObjectProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :KnownPrefix .
+
+:wrapListItems a owl:ObjectProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :WrappingStyle .
+
+# Data properties
+
+:alignBaseIRI a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+:alignObjects a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+:alignPredicates a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+:continuationIndentSize a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:comment "If :indentStyle is :Tab, :continuationIndentSize must be set to a multiple of :tabWidth."@en ;
+    rdfs:seeAlso :indentSize .
+
+:indentPredicates a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+:indentSize a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:comment "If :indentStyle is :Tab, :indentSize must be set to a multiple of :tabWidth."@en ;
+    rdfs:seeAlso :continuationIndentSize .
+
+:insertFinalNewline a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+:iri a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :KnownPrefix ;
+    rdfs:range xsd:anyURI .
+
+:maxLineLength a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:nonNegativeInteger .
+
+:noCommaForPredicate a owl:DatatypeProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:anyURI .
+
+:prefix a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :KnownPrefix ;
+    rdfs:range xsd:string .
+
+:rdfTypeInNewLine a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+:tabWidth a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:positiveInteger .
+
+:trimTrailingWhitespace a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+:useAForRdfType a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+:useShortLiterals a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
+# Classes
+
+:Alignment a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( :Left :Off :Right )
+    ] .
+
+:Charset a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( :Latin1 :UTF-16-BE :UTF-16-LE :UTF-8 :UTF-8-BOM )
+    ] .
+
+:EndOfLineStyle a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( :CR :CRLF :LF )
+    ] .
+
+:GapStyle a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( :Newline :Nothing :Space )
+    ] .
+
+:IndentStyle a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( :Space :Tab )
+    ] .
+
+:KnownPrefix a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :iri ;
+        owl:allValuesFrom xsd:anyURI
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :prefix ;
+        owl:allValuesFrom xsd:string
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :iri ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:anyURI
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :prefix ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:string
+    ] .
+
+:TurtleFormattingStyle a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :knownPrefix ;
+        owl:someValuesFrom :KnownPrefix
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterClosingParenthesis ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterClosingSquareBracket ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterComma ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterDot ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterOpeningParenthesis ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterOpeningSquareBracket ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterSemicolon ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignPrefixes ;
+        owl:allValuesFrom :Alignment
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeClosingParenthesis ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeClosingSquareBracket ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeComma ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeDot ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeOpeningParenthesis ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeOpeningSquareBracket ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeSemicolon ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :charset ;
+        owl:allValuesFrom :Charset
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :endOfLine ;
+        owl:allValuesFrom :EndOfLineStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :indentStyle ;
+        owl:allValuesFrom :IndentStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :knownPrefix ;
+        owl:allValuesFrom :KnownPrefix
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :wrapListItems ;
+        owl:allValuesFrom :WrappingStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterClosingParenthesis ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterClosingSquareBracket ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterComma ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterDot ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterOpeningParenthesis ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterOpeningSquareBracket ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterSemicolon ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignPrefixes ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :Alignment
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeClosingParenthesis ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeClosingSquareBracket ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeComma ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeDot ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeOpeningParenthesis ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeOpeningSquareBracket ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeSemicolon ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :charset ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :Charset
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :endOfLine ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :EndOfLineStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :indentStyle ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :IndentStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :wrapListItems ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onClass :WrappingStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :noCommaForPredicate ;
+        owl:someValuesFrom xsd:anyURI
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :rdfTypeInNewLine ;
+        owl:someValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :useAForRdfType ;
+        owl:someValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :useShortLiterals ;
+        owl:someValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignBaseIRI ;
+        owl:allValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignObjects ;
+        owl:allValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignPredicates ;
+        owl:allValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :continuationIndentSize ;
+        owl:allValuesFrom xsd:positiveInteger
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :indentPredicates ;
+        owl:allValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :insertFinalNewline ;
+        owl:allValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :maxLineLength ;
+        owl:allValuesFrom xsd:nonNegativeInteger
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :noCommaForPredicate ;
+        owl:allValuesFrom xsd:anyURI
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :rdfTypeInNewLine ;
+        owl:allValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :tabWidth ;
+        owl:allValuesFrom xsd:positiveInteger
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :trimTrailingWhitespace ;
+        owl:allValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :useShortLiterals ;
+        owl:allValuesFrom xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignBaseIRI ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignObjects ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignPredicates ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :continuationIndentSize ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:positiveInteger
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :indentPredicates ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :insertFinalNewline ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :maxLineLength ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:nonNegativeInteger
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :tabWidth ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:positiveInteger
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :trimTrailingWhitespace ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :useAForRdfType ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ] .
+
+:WrappingStyle a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( :Always :ForLongLines :Never )
+    ] .
+
+# Individuals
+
+:Always a owl:NamedIndividual, :WrappingStyle .
+
+:CR a owl:NamedIndividual, :EndOfLineStyle .
+
+:CRLF a owl:NamedIndividual, :EndOfLineStyle .
+
+:ForLongLines a owl:NamedIndividual, :WrappingStyle .
+
+:LF a owl:NamedIndividual, :EndOfLineStyle .
+
+:Latin1 a owl:NamedIndividual, :Charset .
+
+:Left a owl:NamedIndividual, :Alignment .
+
+:Never a owl:NamedIndividual, :WrappingStyle .
+
+:Newline a owl:NamedIndividual, :GapStyle .
+
+:Nothing a owl:NamedIndividual, :GapStyle .
+
+:Off a owl:NamedIndividual, :Alignment .
+
+:Right a owl:NamedIndividual, :Alignment .
+
+:Space a owl:NamedIndividual, :GapStyle, :IndentStyle .
+
+:Tab a owl:NamedIndividual, :IndentStyle .
+
+:UTF-16-BE a owl:NamedIndividual, :Charset .
+
+:UTF-16-LE a owl:NamedIndividual, :Charset .
+
+:UTF-8 a owl:NamedIndividual, :Charset .
+
+:UTF-8-BOM a owl:NamedIndividual, :Charset .
+
