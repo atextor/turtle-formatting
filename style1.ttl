@@ -1,0 +1,57 @@
+@prefix : <http://purl.org/atextor/ontology/turtle-formatting/style1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fmt: <http://purl.org/atextor/ontology/turtle-formatting#> .
+
+<http://purl.org/atextor/ontology/turtle-formatting/style1> a owl:Ontology ;
+    rdfs:label "Turtle Formatting Style 1" ;
+    dcterms:title "RDF/Turtle Formatting Style" ;
+    dcterms:description "A formatting style for RDF/Turtle documents"@en ;
+    dcterms:creator "Andreas Textor" ;
+    dcterms:rights "Apache 2.0 License" ;
+    dcterms:issued "2020-10-02"^^xsd:date ;
+    owl:versionInfo "1.0.0" ;
+    owl:imports <http://purl.org/atextor/ontology/turtle-formatting> .
+
+:Style1 a fmt:TurtleFormattingStyle ;
+    fmt:knownPrefix [
+        a fmt:KnownPrefix ;
+        fmt:iri "http://www.w3.org/2001/XMLSchema#" ;
+        fmt:prefix "xsd"
+    ] ;
+    fmt:afterClosingParenthesis fmt:Newline ;
+    fmt:afterClosingSquareBracket fmt:Space ;
+    fmt:afterComma fmt:Space ;
+    fmt:afterDot fmt:Newline ;
+    fmt:afterOpeningParenthesis fmt:Space ;
+    fmt:afterOpeningSquareBracket fmt:Newline ;
+    fmt:afterSemicolon fmt:Newline ;
+    fmt:alignPrefixes fmt:Off ;
+    fmt:beforeClosingParenthesis fmt:Space ;
+    fmt:beforeClosingSquareBracket fmt:Newline ;
+    fmt:beforeComma fmt:Nothing ;
+    fmt:beforeDot fmt:Space ;
+    fmt:beforeOpeningParenthesis fmt:Space ;
+    fmt:beforeOpeningSquareBracket fmt:Space ;
+    fmt:beforeSemicolon fmt:Space ;
+    fmt:charset fmt:UTF-8 ;
+    fmt:endOfLine fmt:LF ;
+    fmt:indentStyle fmt:Space ;
+    fmt:wrapListItems fmt:ForLongLines ;
+    fmt:rdfTypeInNewLine false ;
+    fmt:useAForRdfType true ;
+    fmt:useShortLiterals true ;
+    fmt:alignBaseIRI false ;
+    fmt:alignObjects false ;
+    fmt:alignPredicates true ;
+    fmt:continuationIndentSize "4"^^xsd:positiveInteger ;
+    fmt:indentPredicates true ;
+    fmt:insertFinalNewline true ;
+    fmt:maxLineLength 100 ;
+    fmt:rdfTypeInNewLine false ;
+    fmt:trimTrailingWhitespace true .
+
