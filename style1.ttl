@@ -1,9 +1,8 @@
 @prefix : <http://purl.org/atextor/ontology/turtle-formatting/style1#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fmt: <http://purl.org/atextor/ontology/turtle-formatting#> .
 
@@ -48,9 +47,10 @@
     fmt:alignBaseIRI false ;
     fmt:alignObjects false ;
     fmt:alignPredicates true ;
-    fmt:continuationIndentSize "4"^^xsd:positiveInteger ;
+    fmt:continuationIndentSize 8 ;
     fmt:indentPredicates true ;
     fmt:insertFinalNewline true ;
+    fmt:intentSize 4 ;
     fmt:maxLineLength 100 ;
     fmt:rdfTypeInNewLine false ;
     fmt:trimTrailingWhitespace true .
