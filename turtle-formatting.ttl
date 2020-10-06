@@ -442,6 +442,10 @@
         owl:allValuesFrom xsd:boolean
     ], [
         a owl:Restriction ;
+        owl:onProperty :indentSize ;
+        owl:allValuesFrom xsd:integer
+    ], [
+        a owl:Restriction ;
         owl:onProperty :maxLineLength ;
         owl:allValuesFrom xsd:nonNegativeInteger
     ], [
