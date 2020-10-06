@@ -564,3 +564,39 @@
 
 :UTF-8-BOM a owl:NamedIndividual, :Charset .
 
+:fmt a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://purl.org/atextor/ontology/turtle-formatting#" ;
+    :prefix "fmt" .
+
+:rdf a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ;
+    :prefix "rdf" .
+
+:rdfs a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://www.w3.org/2000/01/rdf-schema#" ;
+    :prefix "rdfs" .
+
+:xsd a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://www.w3.org/2001/XMLSchema#" ;
+    :prefix "xsd" .
+
+:owl a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://www.w3.org/2002/07/owl#" ;
+    :prefix "owl" .
+
+:dcterms a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://purl.org/dc/terms/" ;
+    :prefix "dcterms" .
+
+:vann a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://purl.org/vocab/vann/" ;
+    :prefix "vann" .
+
+:skos a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://www.w3.org/2004/02/skos/core#" ;
+    :prefix "skos" .
+
+:ex a owl:NamedIndividual, :KnownPrefix ;
+    :iri "http://example.org/" ;
+    :prefix "ex" .
+
