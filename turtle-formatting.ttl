@@ -113,7 +113,7 @@
 
 :continuationIndentSize a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
-    rdfs:range xsd:positiveInteger ;
+    rdfs:range xsd:integer ;
     rdfs:comment "If :indentStyle is :Tab, :continuationIndentSize must be set to a multiple of :tabWidth."@en ;
     rdfs:seeAlso :indentSize .
 
@@ -123,7 +123,7 @@
 
 :indentSize a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
-    rdfs:range xsd:positiveInteger ;
+    rdfs:range xsd:integer ;
     rdfs:comment "If :indentStyle is :Tab, :indentSize must be set to a multiple of :tabWidth."@en ;
     rdfs:seeAlso :continuationIndentSize .
 
@@ -153,7 +153,7 @@
 
 :tabWidth a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
-    rdfs:range xsd:positiveInteger .
+    rdfs:range xsd:integer .
 
 :trimTrailingWhitespace a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
@@ -431,7 +431,7 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :continuationIndentSize ;
-        owl:allValuesFrom xsd:positiveInteger
+        owl:allValuesFrom xsd:integer
     ], [
         a owl:Restriction ;
         owl:onProperty :indentPredicates ;
@@ -455,7 +455,7 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :tabWidth ;
-        owl:allValuesFrom xsd:positiveInteger
+        owl:allValuesFrom xsd:integer
     ], [
         a owl:Restriction ;
         owl:onProperty :trimTrailingWhitespace ;
@@ -483,7 +483,7 @@
         a owl:Restriction ;
         owl:onProperty :continuationIndentSize ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:positiveInteger
+        owl:onDataRange xsd:integer
     ], [
         a owl:Restriction ;
         owl:onProperty :indentPredicates ;
@@ -503,7 +503,7 @@
         a owl:Restriction ;
         owl:onProperty :tabWidth ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:positiveInteger
+        owl:onDataRange xsd:integer
     ], [
         a owl:Restriction ;
         owl:onProperty :trimTrailingWhitespace ;
