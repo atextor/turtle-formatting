@@ -17,11 +17,12 @@
     owl:imports <http://purl.org/atextor/ontology/turtle-formatting> .
 
 :Style1 a fmt:TurtleFormattingStyle ;
-    fmt:knownPrefix [
-        a fmt:KnownPrefix ;
-        fmt:iri "http://www.w3.org/2001/XMLSchema#" ;
-        fmt:prefix "xsd"
-    ] ;
+    fmt:knownPrefix fmt:rdf ;
+    fmt:knownPrefix fmt:rdfs ;
+    fmt:knownPrefix fmt:xsd ;
+    fmt:knownPrefix fmt:owl ;
+    fmt:knownPrefix fmt:dcterms ;
+    fmt:knownPrefix fmt:fmt ;
     fmt:afterClosingParenthesis fmt:Newline ;
     fmt:afterClosingSquareBracket fmt:Space ;
     fmt:afterComma fmt:Space ;
