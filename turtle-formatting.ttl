@@ -228,84 +228,12 @@
         owl:someValuesFrom :KnownPrefix
     ], [
         a owl:Restriction ;
-        owl:onProperty :afterClosingParenthesis ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :afterClosingSquareBracket ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :afterComma ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :afterDot ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :afterOpeningParenthesis ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :afterOpeningSquareBracket ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :afterSemicolon ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :alignPrefixes ;
-        owl:allValuesFrom :Alignment
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :beforeClosingParenthesis ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :beforeClosingSquareBracket ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :beforeComma ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :beforeDot ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :beforeOpeningParenthesis ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :beforeOpeningSquareBracket ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :beforeSemicolon ;
-        owl:allValuesFrom :GapStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :charset ;
-        owl:allValuesFrom :Charset
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :endOfLine ;
-        owl:allValuesFrom :EndOfLineStyle
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :indentStyle ;
-        owl:allValuesFrom :IndentStyle
-    ], [
-        a owl:Restriction ;
         owl:onProperty :knownPrefix ;
         owl:allValuesFrom :KnownPrefix
     ], [
         a owl:Restriction ;
-        owl:onProperty :wrapListItems ;
-        owl:allValuesFrom :WrappingStyle
+        owl:onProperty :afterClosingParenthesis ;
+        owl:allValuesFrom :GapStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :afterClosingParenthesis ;
@@ -314,8 +242,16 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :afterClosingSquareBracket ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterClosingSquareBracket ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterComma ;
+        owl:allValuesFrom :GapStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :afterComma ;
@@ -324,8 +260,16 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :afterDot ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterDot ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterOpeningParenthesis ;
+        owl:allValuesFrom :GapStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :afterOpeningParenthesis ;
@@ -334,13 +278,25 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :afterOpeningSquareBracket ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterOpeningSquareBracket ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :afterSemicolon ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :afterSemicolon ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :alignPrefixes ;
+        owl:allValuesFrom :Alignment
     ], [
         a owl:Restriction ;
         owl:onProperty :alignPrefixes ;
@@ -349,8 +305,16 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :beforeClosingParenthesis ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeClosingParenthesis ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeClosingSquareBracket ;
+        owl:allValuesFrom :GapStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :beforeClosingSquareBracket ;
@@ -359,8 +323,16 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :beforeComma ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeComma ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeDot ;
+        owl:allValuesFrom :GapStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :beforeDot ;
@@ -369,8 +341,16 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :beforeOpeningParenthesis ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeOpeningParenthesis ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeOpeningSquareBracket ;
+        owl:allValuesFrom :GapStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :beforeOpeningSquareBracket ;
@@ -379,8 +359,16 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :beforeSemicolon ;
+        owl:allValuesFrom :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :beforeSemicolon ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :charset ;
+        owl:allValuesFrom :Charset
     ], [
         a owl:Restriction ;
         owl:onProperty :charset ;
@@ -389,13 +377,25 @@
     ], [
         a owl:Restriction ;
         owl:onProperty :endOfLine ;
+        owl:allValuesFrom :EndOfLineStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :endOfLine ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :EndOfLineStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :indentStyle ;
+        owl:allValuesFrom :IndentStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :indentStyle ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :IndentStyle
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :wrapListItems ;
+        owl:allValuesFrom :WrappingStyle
     ], [
         a owl:Restriction ;
         owl:onProperty :wrapListItems ;
