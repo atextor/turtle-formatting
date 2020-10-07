@@ -1,0 +1,110 @@
+@prefix : <http://purl.org/atextor/ontology/turtle-formatting#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com/ns#> .
+
+:TurtleFormattingStyleShape a sh:NodeShape ;
+    sh:targetClass :TurtleFormattingStyle ;
+    sh:property [
+        sh:path :knownPrefix ;
+        sh:class :KnownPrefix ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+    ] ;
+    sh:property [
+        sh:path :afterClosingParenthesis ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :afterClosingSquareBracket ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :afterComma ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :afterDot ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :afterOpeningParenthesis ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :afterOpeningSquareBracket ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :afterSemicolon ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :alignPrefixes ;
+        sh:maxCount 1 ;
+        sh:in ( :Left :Off :Right ) ;
+    ] ;
+    sh:property [
+        sh:path :beforeClosingParenthesis ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :beforeClosingSquareBracket ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :beforeComma ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :beforeDot ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :beforeOpeningParenthesis ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :beforeOpeningSquareBracket ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :beforeSemicolon ;
+        sh:maxCount 1 ;
+        sh:in ( :Newline :Nothing :Space ) ;
+    ] ;
+    sh:property [
+        sh:path :charset ;
+        sh:maxCount 1 ;
+        sh:in ( :Latin1 :UTF-16-BE :UTF-16-LE :UTF-8 :UTF-8-BOM ) ;
+    ] ;
+    sh:property [
+        sh:path :endOfLine ;
+        sh:maxCount 1 ;
+        sh:in ( :CR :CRLF :LF ) ;
+    ] ;
+    sh:property [
+        sh:path :indentStyle ;
+        sh:maxCount 1 ;
+        sh:in ( :CR :CRLF :LF ) ;
+    ] ;
+    sh:property [
+        sh:path :wrapListItems ;
+        sh:maxCount 1 ;
+        sh:in ( :Always :ForLongLines :Never ) ;
+    ] ;
+.
