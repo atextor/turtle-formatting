@@ -204,16 +204,19 @@
         a owl:Restriction ;
         owl:onProperty :iri ;
         owl:allValuesFrom xsd:anyURI
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :prefix ;
         owl:allValuesFrom xsd:string
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :iri ;
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onDataRange xsd:anyURI
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :prefix ;
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -225,300 +228,373 @@
         a owl:Restriction ;
         owl:onProperty :knownPrefix ;
         owl:someValuesFrom :KnownPrefix
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :knownPrefix ;
         owl:allValuesFrom :KnownPrefix
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterClosingParenthesis ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterClosingParenthesis ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterClosingSquareBracket ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterClosingSquareBracket ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterComma ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterComma ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterDot ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterDot ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterOpeningParenthesis ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterOpeningParenthesis ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterOpeningSquareBracket ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterOpeningSquareBracket ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterSemicolon ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :afterSemicolon ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :alignPrefixes ;
         owl:allValuesFrom :Alignment
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :alignPrefixes ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :Alignment
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeClosingParenthesis ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeClosingParenthesis ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeClosingSquareBracket ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeClosingSquareBracket ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeComma ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeComma ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeDot ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeDot ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeOpeningParenthesis ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeOpeningParenthesis ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeOpeningSquareBracket ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeOpeningSquareBracket ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeSemicolon ;
         owl:allValuesFrom :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :beforeSemicolon ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :GapStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :charset ;
         owl:allValuesFrom :Charset
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :charset ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :Charset
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :endOfLine ;
         owl:allValuesFrom :EndOfLineStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :endOfLine ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :EndOfLineStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :indentStyle ;
         owl:allValuesFrom :IndentStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :indentStyle ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :IndentStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :wrapListItems ;
         owl:allValuesFrom :WrappingStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :wrapListItems ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :WrappingStyle
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :noCommaForPredicate ;
         owl:someValuesFrom xsd:anyURI
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :rdfTypeInNewLine ;
-        owl:someValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :useAForRdfType ;
-        owl:someValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :useShortLiterals ;
-        owl:someValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :alignBaseIRI ;
-        owl:allValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :alignObjects ;
-        owl:allValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :alignPredicates ;
-        owl:allValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :continuationIndentSize ;
-        owl:allValuesFrom xsd:integer
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :indentPredicates ;
-        owl:allValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :insertFinalNewline ;
-        owl:allValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :indentSize ;
-        owl:allValuesFrom xsd:integer
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :maxLineLength ;
-        owl:allValuesFrom xsd:nonNegativeInteger
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :noCommaForPredicate ;
         owl:allValuesFrom xsd:anyURI
-    ], [
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :rdfTypeInNewLine ;
+        owl:someValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :rdfTypeInNewLine ;
         owl:allValuesFrom xsd:boolean
-    ], [
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
-        owl:onProperty :tabWidth ;
-        owl:allValuesFrom xsd:integer
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :trimTrailingWhitespace ;
-        owl:allValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :useShortLiterals ;
-        owl:allValuesFrom xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :alignBaseIRI ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :alignObjects ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :alignPredicates ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :continuationIndentSize ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:integer
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :indentPredicates ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :insertFinalNewline ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:boolean
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :maxLineLength ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:nonNegativeInteger
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :tabWidth ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:integer
-    ], [
-        a owl:Restriction ;
-        owl:onProperty :trimTrailingWhitespace ;
-        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onDataRange xsd:boolean
-    ], [
+        owl:onProperty :useAForRdfType ;
+        owl:someValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :useAForRdfType ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onDataRange xsd:boolean
-    ] .
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :useShortLiterals ;
+        owl:someValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :useShortLiterals ;
+        owl:allValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :alignBaseIRI ;
+        owl:allValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :alignBaseIRI ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :alignObjects ;
+        owl:allValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :alignObjects ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :alignPredicates ;
+        owl:allValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :alignPredicates ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :continuationIndentSize ;
+        owl:allValuesFrom xsd:integer
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :continuationIndentSize ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:integer
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :indentPredicates ;
+        owl:allValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :indentPredicates ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :insertFinalNewline ;
+        owl:allValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :insertFinalNewline ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :indentSize ;
+        owl:allValuesFrom xsd:integer
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :indentSize ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:integer
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :maxLineLength ;
+        owl:allValuesFrom xsd:integer
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :maxLineLength ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:integer
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :tabWidth ;
+        owl:allValuesFrom xsd:integer
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :tabWidth ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:integer
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :trimTrailingWhitespace ;
+        owl:allValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :trimTrailingWhitespace ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ] ;
+.
 
 :WrappingStyle a owl:Class ;
     owl:equivalentClass [
