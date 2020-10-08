@@ -100,7 +100,7 @@
     sh:property [
         sh:path :indentStyle ;
         sh:maxCount 1 ;
-        sh:in ( :CR :CRLF :LF ) ;
+        sh:in ( :Space :Tab ) ;
     ] ;
     sh:property [
         sh:path :wrapListItems ;
