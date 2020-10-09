@@ -4,15 +4,17 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://purl.org/atextor/ontology/turtle-formatting> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
 <http://purl.org/atextor/ontology/turtle-formatting> a owl:Ontology ;
     rdfs:label "Turtle Formatting" ;
     dcterms:title "RDF/Turtle Formatting Style Ontology" ;
     dcterms:description "Defines a vocabulary for the description of settings for pretty-printing a RDF/Turtle document."@en ;
-	 dcterms:creator "Andreas Textor";
-	 dcterms:rights "Apache 2.0 License";
-	 dcterms:issued "2020-10-02"^^xsd:date;
+    dcterms:creator "Andreas Textor" ;
+    dcterms:rights "Apache 2.0 License" ;
+    dcterms:issued "2020-10-02"^^xsd:date ;
+    vann:preferredNamespacePrefix "fmt" ;
+    vann:preferredNamespaceUri "http://purl.org/vocab/vann/" ;
     owl:versionInfo "1.0.0" .
 
 # Object Properties
