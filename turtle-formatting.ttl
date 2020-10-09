@@ -141,9 +141,15 @@
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:nonNegativeInteger .
 
+:commaForPredicate a owl:DatatypeProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "If :useCommaByDefault is false, :commaForPredicate can be used to override this and still use a comma for the given property."@en .
+
 :noCommaForPredicate a owl:DatatypeProperty ;
     rdfs:domain :TurtleFormattingStyle ;
-    rdfs:range xsd:anyURI .
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "If :useCommaByDefault is true, :noCommaForPredicate can be used to override this and still use no comma for the given property."@en .
 
 :prefix a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :KnownPrefix ;
@@ -448,6 +454,16 @@
         owl:onProperty :wrapListItems ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onClass :WrappingStyle
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :commaForPredicate ;
+        owl:someValuesFrom xsd:anyURI
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :commaForPredicate ;
+        owl:allValuesFrom xsd:anyURI
     ] ;
     rdfs:subClassOf [
         a owl:Restriction ;

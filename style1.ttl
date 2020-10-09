@@ -45,6 +45,7 @@
     fmt:rdfTypeInNewLine false ;
     fmt:useAForRdfType true ;
     fmt:useCommaByDefault false ;
+    fmt:commaForPredicate rdf:type ;
     fmt:useShortLiterals true ;
     fmt:alignBaseIRI false ;
     fmt:alignObjects false ;
