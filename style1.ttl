@@ -44,6 +44,7 @@
     fmt:wrapListItems fmt:ForLongLines ;
     fmt:rdfTypeInNewLine false ;
     fmt:useAForRdfType true ;
+    fmt:useCommaByDefault false ;
     fmt:useShortLiterals true ;
     fmt:alignBaseIRI false ;
     fmt:alignObjects false ;

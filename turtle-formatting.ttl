@@ -163,6 +163,10 @@
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:boolean .
 
+:useCommaByDefault a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
 :useShortLiterals a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:boolean .
@@ -472,6 +476,17 @@
     rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :useAForRdfType ;
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :useCommaByDefault ;
+        owl:someValuesFrom xsd:boolean
+    ] ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :useCommaByDefault ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onDataRange xsd:boolean
     ] ;
