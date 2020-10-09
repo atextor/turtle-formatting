@@ -461,7 +461,8 @@
     rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :rdfTypeInNewLine ;
-        owl:allValuesFrom xsd:boolean
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
     ] ;
     rdfs:subClassOf [
         a owl:Restriction ;
@@ -482,7 +483,8 @@
     rdfs:subClassOf [
         a owl:Restriction ;
         owl:onProperty :useShortLiterals ;
-        owl:allValuesFrom xsd:boolean
+        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+        owl:onDataRange xsd:boolean
     ] ;
     rdfs:subClassOf [
         a owl:Restriction ;
