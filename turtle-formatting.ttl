@@ -118,6 +118,7 @@
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:integer ;
     rdfs:comment "If :indentStyle is :Tab, :continuationIndentSize must be set to a multiple of :tabWidth."@en ;
+    rdfs:seeAlso :indentStyle ;
     rdfs:seeAlso :indentSize .
 
 :indentPredicates a owl:DatatypeProperty, owl:FunctionalProperty ;
@@ -128,6 +129,7 @@
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:integer ;
     rdfs:comment "If :indentStyle is :Tab, :indentSize must be set to a multiple of :tabWidth."@en ;
+    rdfs:seeAlso :indentStyle ;
     rdfs:seeAlso :continuationIndentSize .
 
 :insertFinalNewline a owl:DatatypeProperty, owl:FunctionalProperty ;
@@ -145,12 +147,14 @@
 :commaForPredicate a owl:DatatypeProperty ;
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:anyURI ;
-    rdfs:comment "If :useCommaByDefault is false, :commaForPredicate can be used to override this and still use a comma for the given property."@en .
+    rdfs:comment "If :useCommaByDefault is false, :commaForPredicate can be used to override this and still use a comma for the given property."@en ;
+    rdfs:seeAlso :useCommaByDefault .
 
 :noCommaForPredicate a owl:DatatypeProperty ;
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:anyURI ;
-    rdfs:comment "If :useCommaByDefault is true, :noCommaForPredicate can be used to override this and still use no comma for the given property."@en .
+    rdfs:comment "If :useCommaByDefault is true, :noCommaForPredicate can be used to override this and still use no comma for the given property."@en ;
+    rdfs:seeAlso :useCommaByDefault .
 
 :prefix a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :KnownPrefix ;
