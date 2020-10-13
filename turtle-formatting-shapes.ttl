@@ -3,7 +3,20 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix ex: <http://example.com/ns#> .
+
+:sparqlPrefixes a owl:Ontology ;
+    owl:imports sh: ;
+    sh:declare [
+        sh:prefix "fmt" ;
+        sh:namespace "http://purl.org/atextor/ontology/turtle-formatting#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "xsd" ;
+        sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
+    ]
+.
 
 :TurtleFormattingStyleShape a sh:NodeShape ;
     sh:targetClass :TurtleFormattingStyle ;
@@ -176,4 +189,38 @@
         sh:maxCount 1 ;
         sh:datatype xsd:boolean ;
     ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If :indentStyle is :Tab, :continuationIndentSize must be set to a multiple of :tabWidth." ;
+        sh:prefixes :sparqlPrefixes ;
+        sh:select """
+           select $this (fmt:continuationIndentSize as ?path) ?value
+           where {
+             $this fmt:indentStyle fmt:Tab .
+             $this fmt:tabWidth ?tabWidth .
+             $this fmt:continuationIndentSize ?continuationIndentSize .
+             bind(xsd:integer(?tabWidth) as ?tw)
+             bind(xsd:integer(?continuationIndentSize) as ?ci)
+             filter((?ci - ?tw * (?ci / ?tw)) != 0 || (?ci < ?tw))
+             bind(?tw as ?value)
+           }
+        """ ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If :indentStyle is :Tab, :indentSize must be set to a multiple of :tabWidth." ;
+        sh:prefixes :sparqlPrefixes ;
+        sh:select """
+           select $this (fmt:indentSize as ?path) ?value
+           where {
+             $this fmt:indentStyle fmt:Tab .
+             $this fmt:tabWidth ?tabWidth .
+             $this fmt:indentSize ?indentSize .
+             bind(xsd:integer(?tabWidth) as ?tw)
+             bind(xsd:integer(?indentSize) as ?is)
+             filter((?is - ?tw * (?is / ?tw)) != 0 || (?is < ?tw))
+             bind(?tw as ?value)
+           }
+        """ ;
+    ]
 .
