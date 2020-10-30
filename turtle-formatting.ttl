@@ -14,7 +14,7 @@
     dcterms:rights "Apache 2.0 License" ;
     dcterms:issued "2020-10-02"^^xsd:date ;
     vann:preferredNamespacePrefix "fmt" ;
-    vann:preferredNamespaceUri "http://purl.org/vocab/vann/" ;
+    vann:preferredNamespaceUri "http://purl.org/atextor/ontology/turtle-formatting#" ;
     vann:example <http://purl.org/atextor/ontology/turtle-formatting/style1> ;
     owl:versionInfo "1.0.0" .
 
