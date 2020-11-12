@@ -55,6 +55,5 @@
     fmt:insertFinalNewline true ;
     fmt:indentSize 4 ;
     fmt:maxLineLength 100 ;
-    fmt:rdfTypeInNewLine false ;
     fmt:trimTrailingWhitespace true .
 
