@@ -21,11 +21,6 @@
 :TurtleFormattingStyleShape a sh:NodeShape ;
     sh:targetClass :TurtleFormattingStyle ;
     sh:property [
-        sh:path :knownPrefix ;
-        sh:class :KnownPrefix ;
-        sh:nodeKind sh:BlankNodeOrIRI ;
-    ] ;
-    sh:property [
         sh:path :afterClosingParenthesis ;
         sh:maxCount 1 ;
         sh:in ( :Newline :Nothing :Space ) ;
@@ -116,28 +111,14 @@
         sh:in ( :Space :Tab ) ;
     ] ;
     sh:property [
+        sh:path :knownPrefix ;
+        sh:class :KnownPrefix ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+    ] ;
+    sh:property [
         sh:path :wrapListItems ;
         sh:maxCount 1 ;
         sh:in ( :Always :ForLongLines :Never ) ;
-    ] ;
-    sh:property [
-        sh:path :noCommaForPredicate ;
-        sh:nodeKind sh:IRI ;
-    ] ;
-    sh:property [
-        sh:path :rdfTypeInNewLine ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:boolean ;
-    ] ;
-    sh:property [
-        sh:path :useAForRdfType ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:boolean ;
-    ] ;
-    sh:property [
-        sh:path :useShortLiterals ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:boolean ;
     ] ;
     sh:property [
         sh:path :alignBaseIRI ;
@@ -165,19 +146,28 @@
         sh:datatype xsd:boolean ;
     ] ;
     sh:property [
-        sh:path :insertFinalNewline ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:boolean ;
-    ] ;
-    sh:property [
         sh:path :indentSize ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer ;
     ] ;
     sh:property [
+        sh:path :insertFinalNewline ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
         sh:path :maxLineLength ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer ;
+    ] ;
+    sh:property [
+        sh:path :noCommaForPredicate ;
+        sh:datatype xsd:anyURI ;
+    ] ;
+    sh:property [
+        sh:path :rdfTypeInNewLine ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
     ] ;
     sh:property [
         sh:path :tabWidth ;
@@ -186,6 +176,21 @@
     ] ;
     sh:property [
         sh:path :trimTrailingWhitespace ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path :useAForRdfType ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path :useCommaByDefault ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path :useShortLiterals ;
         sh:maxCount 1 ;
         sh:datatype xsd:boolean ;
     ] ;
