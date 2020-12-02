@@ -45,7 +45,7 @@
     fmt:rdfTypeInNewLine false ;
     fmt:useAForRdfType true ;
     fmt:useCommaByDefault false ;
-    fmt:commaForPredicate rdf:type ;
+    fmt:commaForPredicate "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"^^xsd:anyURI ;
     fmt:useShortLiterals true ;
     fmt:alignBaseIRI false ;
     fmt:alignObjects false ;
