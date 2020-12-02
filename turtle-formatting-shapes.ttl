@@ -161,6 +161,10 @@
         sh:datatype xsd:integer ;
     ] ;
     sh:property [
+        sh:path :commaForPredicate ;
+        sh:datatype xsd:anyURI ;
+    ] ;
+    sh:property [
         sh:path :noCommaForPredicate ;
         sh:datatype xsd:anyURI ;
     ] ;
