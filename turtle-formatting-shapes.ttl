@@ -231,5 +231,30 @@
              bind(?tw as ?value)
            }
         """ ;
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "If :indentStyle is :Tab, :alignPredicates and :alignObjects must be false." ;
+        sh:prefixes :sparqlPrefixes ;
+        sh:select """
+           select $this ?path ?value
+           where {
+             {
+               filter(exists {
+                 $this fmt:indentStyle fmt:Tab .
+                 $this fmt:alignPredicates true .
+               })
+               bind(fmt:alignPredicates as ?path)
+               bind(true as ?value)
+             } union {
+               filter(exists {
+                 $this fmt:indentStyle fmt:Tab .
+                 $this fmt:alignObjects true .
+               })
+               bind(fmt:alignObjects as ?path)
+               bind(true as ?value)
+             }
+           }
+        """ ;
     ]
 .
