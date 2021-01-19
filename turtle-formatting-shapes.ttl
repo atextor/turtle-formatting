@@ -169,7 +169,7 @@
         sh:datatype xsd:anyURI ;
     ] ;
     sh:property [
-        sh:path :rdfTypeInNewLine ;
+        sh:path :firstPredicateInNewLine ;
         sh:maxCount 1 ;
         sh:datatype xsd:boolean ;
     ] ;

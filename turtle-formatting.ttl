@@ -160,7 +160,7 @@
     rdfs:domain :KnownPrefix ;
     rdfs:range xsd:string .
 
-:rdfTypeInNewLine a owl:DatatypeProperty, owl:FunctionalProperty ;
+:firstPredicateInNewLine a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:boolean .
 
@@ -482,12 +482,12 @@
     ] ;
     rdfs:subClassOf [
         a owl:Restriction ;
-        owl:onProperty :rdfTypeInNewLine ;
+        owl:onProperty :firstPredicateInNewLine ;
         owl:someValuesFrom xsd:boolean
     ] ;
     rdfs:subClassOf [
         a owl:Restriction ;
-        owl:onProperty :rdfTypeInNewLine ;
+        owl:onProperty :firstPredicateInNewLine ;
         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
         owl:onDataRange xsd:boolean
     ] ;
