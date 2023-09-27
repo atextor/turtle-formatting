@@ -111,6 +111,11 @@
         sh:in ( :Space :Tab ) ;
     ] ;
     sh:property [
+        sh:path :quoteStyle ;
+        sh:maxCount 1 ;
+        sh:in ( :AlwaysSingleQuotes :TripleQuotesForMultiLine :AlwaysTripleQuotes ) ;
+    ] ;
+    sh:property [
         sh:path :knownPrefix ;
         sh:class :KnownPrefix ;
         sh:nodeKind sh:BlankNodeOrIRI ;
@@ -119,6 +124,16 @@
         sh:path :wrapListItems ;
         sh:maxCount 1 ;
         sh:in ( :Always :ForLongLines :Never ) ;
+    ] ;
+    sh:property [
+        sh:path :emptyRdfBase ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :doubleFormat ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
     ] ;
     sh:property [
         sh:path :alignBaseIRI ;
@@ -180,6 +195,11 @@
     ] ;
     sh:property [
         sh:path :trimTrailingWhitespace ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path :keepUnusedPrefixes ;
         sh:maxCount 1 ;
         sh:datatype xsd:boolean ;
     ] ;

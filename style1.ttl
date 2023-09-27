@@ -23,6 +23,7 @@
     fmt:knownPrefix fmt:owl ;
     fmt:knownPrefix fmt:dcterms ;
     fmt:knownPrefix fmt:fmt ;
+    fmt:emptyRdfBase "" ;
     fmt:afterClosingParenthesis fmt:Newline ;
     fmt:afterClosingSquareBracket fmt:Space ;
     fmt:afterComma fmt:Space ;
@@ -41,7 +42,9 @@
     fmt:charset fmt:UTF-8 ;
     fmt:endOfLine fmt:LF ;
     fmt:indentStyle fmt:Space ;
+    fmt:quoteStyle fmt:TripleQuotesForMultiLine ;
     fmt:wrapListItems fmt:ForLongLines ;
+    fmt:doubleFormat "0.####E0" ;
     fmt:firstPredicateInNewLine false ;
     fmt:useAForRdfType true ;
     fmt:useCommaByDefault false ;
@@ -55,5 +58,7 @@
     fmt:insertFinalNewline true ;
     fmt:indentSize 4 ;
     fmt:maxLineLength 100 ;
-    fmt:trimTrailingWhitespace true .
+    fmt:trimTrailingWhitespace true ;
+    fmt:keepUnusedPrefixes false ;
+.
 

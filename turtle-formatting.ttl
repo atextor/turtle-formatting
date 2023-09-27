@@ -92,6 +92,10 @@
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range :IndentStyle .
 
+:quoteStyle a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range :QuoteStyle .
+
 :knownPrefix a owl:ObjectProperty ;
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range :KnownPrefix .
@@ -101,6 +105,15 @@
     rdfs:range :WrappingStyle .
 
 # Data properties
+
+:emptyRdfBase a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:string .
+
+:doubleFormat a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The number format for double values, as described by https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/DecimalFormat.html" .
 
 :alignBaseIRI a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
@@ -172,6 +185,10 @@
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:boolean .
 
+:keepUnusedPrefixes a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :TurtleFormattingStyle ;
+    rdfs:range xsd:boolean .
+
 :useAForRdfType a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:boolean .
@@ -183,6 +200,9 @@
 :useShortLiterals a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:domain :TurtleFormattingStyle ;
     rdfs:range xsd:boolean .
+
+# TODO: prefixOrder, subjectOrder, predicateOrder, objectOrder,
+# anonymouseNodeIdeGenerator
 
 # Classes
 
@@ -214,6 +234,12 @@
     owl:equivalentClass [
         a owl:Class ;
         owl:oneOf ( :Space :Tab )
+    ] .
+
+:QuoteStyle a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf ( :AlwaysSingleQuotes :TripleQuotesForMultiLine :AlwaysTripleQuotes )
     ] .
 
 :KnownPrefix a owl:Class ;
